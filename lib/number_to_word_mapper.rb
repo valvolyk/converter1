@@ -1,0 +1,6 @@
+require 'number_to_word_mapper/abstract_number'
+require 'number_to_word_mapper/thousand_number'
+require 'number_to_word_mapper/million_number'
+require 'number_to_word_mapper/simple_mapper'
+require 'number_to_word_mapper/complex_mapper'
+require 'number_to_word_mapper/currency/uah'
