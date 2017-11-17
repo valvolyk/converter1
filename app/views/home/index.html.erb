@@ -1,0 +1,23 @@
+<div id="example">
+  <input type="text" id="number-to-word" v-on:keyup="run">
+  <div id="converted"></div>
+</div>
+
+<script type="text/javascript">
+
+  var convertToWord = new Vue({
+    el: '#example',
+    data: {
+      name: 'Vue.js'
+    },
+    // define methods under the `methods` object
+    methods: {
+      run: function (event) {
+        var text = $(event.target).val();
+        if(!text) return;
+        ConvertNumberToWord.do(text, $('#converted'));
+      }
+    }
+  });
+
+</script>

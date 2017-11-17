@@ -1,0 +1,1 @@
+require_relative '../../lib/number_to_word_mapper'
