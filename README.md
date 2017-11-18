@@ -1,24 +1,38 @@
-# README
+#Converter 
+This rails app allows you generate money string(russian words) by entering integer from 1 to 999999999. 
+Changing result without requiring submit or a page refresh.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Getting Started
 
-Things you may want to cover:
+    Using: 
+    
+    Ruby version 2.4.2
+ 
+    Rails version 5.1.4
+ 
+    Vuejs 
+    
+    Ajax
+ 
+From Command Line:
 
-* Ruby version
+ git clone https://github.com/valvolyk/converter1.git 
+ 
+ cd converter1/
+ 
+ bundle install
+ 
+ rails s 
+ 
+ localhost:3000/ on your browser
 
-* System dependencies
+#Running the tests
 
-* Configuration
+From Command Line $ rspec spec/
 
-* Database creation
+See /spec/lib/complex_mapper_spec.rb.
 
-* Database initialization
+Testing the behaviour of ComplexMapper class, which is main compiler.
 
-* How to run the test suite
+See /lib/number_to_word_mapper/complex_mapper.rb  
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
