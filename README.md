@@ -1,8 +1,8 @@
-#Converter 
+# Converter
 This rails app allows you generate money string(russian words) by entering integer from 1 to 999999999. 
 Changing result without requiring submit or a page refresh.
 
-#Getting Started
+## Getting Started
 
     Using: 
     
@@ -13,26 +13,28 @@ Changing result without requiring submit or a page refresh.
     Vuejs 
     
     Ajax
- 
-From Command Line:
+        
+**From Command Line:**
 
- git clone https://github.com/valvolyk/converter1.git 
+ * git clone https://github.com/valvolyk/converter1.git 
  
- cd converter1/
+ * cd converter1/
  
- bundle install
+ * gem install bundler
  
- rails s 
+ * bundle install
  
- localhost:3000/ on your browser
+ * rails s 
+ 
+ * localhost:3000/ _on your browser_
 
-#Running the tests
+## Running the tests
 
-From Command Line $ rspec spec/
+*From Command Line $* rspec spec/
 
-See /spec/lib/complex_mapper_spec.rb.
+_See /spec/lib/complex_mapper_spec.rb._
 
 Testing the behaviour of ComplexMapper class, which is main compiler.
 
-See /lib/number_to_word_mapper/complex_mapper.rb  
+_See /lib/number_to_word_mapper/complex_mapper.rb_  
 

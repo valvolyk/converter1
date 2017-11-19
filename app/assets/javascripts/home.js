@@ -9,7 +9,7 @@ ConvertNumberToWord.do = function(text, $el){
       $el.html(data['text']);
     },
     error: function(data, status, xhr){
-        alert('введите число от 1 до 999999999')
+        alert('Please enter a number between 1 and 999999999')
     },
   });
 };
