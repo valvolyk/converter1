@@ -2,7 +2,7 @@
 <div class="test-task">
   <div id="example" align="center">
     <div class="header">Enter a number between 1 and 999 999 999</div>
-    <br><div><input class= "entered-number" type="text" id="number-to-word" v-on:keyup="run"></div>
+    <br><div><input type="text" class= "entered-number" id="number-to-word" v-on:keyup="run"></div>&nbsp;<span id="errmsg"></span>
     <div class="result" id="converted"></div>
   </div>
 </div>
@@ -22,6 +22,22 @@
         ConvertNumberToWord.do(text, $('#converted'));
       }
     }
+  });
+
+  $(document).ready(function () {
+
+      var max_chars = 8
+
+      $("#number-to-word").keypress(function (e) {
+          if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+              $("#errmsg").html("Please enter numbers only").show().fadeOut("slow");
+              return false;
+          }
+          else if ($(this).val().length >= max_chars) {
+              $(this).val($(this).val().substr(0, max_chars));
+              $("#errmsg").html("Please enter a number between 1 and 999999999").show().fadeOut("slow");
+          }
+      });
   });
 
 </script>

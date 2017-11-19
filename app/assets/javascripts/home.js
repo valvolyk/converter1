@@ -8,8 +8,5 @@ ConvertNumberToWord.do = function(text, $el){
     success: function(data, status, xhr){
       $el.html(data['text']);
     },
-    error: function(data, status, xhr){
-        alert('Please enter a number between 1 and 999999999')
-    },
   });
 };
