@@ -1,4 +1,3 @@
-
 <div class="test-task">
   <div id="example" align="center">
     <div class="header">Enter a number between 1 and 999 999 999</div>
@@ -9,35 +8,33 @@
 
 <script type="text/javascript">
 
-  var convertToWord = new Vue({
-    el: '#example',
-    data: {
-      name: 'Vue.js'
-    },
-    // define methods under the `methods` object
-    methods: {
-      run: function (event) {
-        var text = $(event.target).val();
-        if(!text) return;
-        ConvertNumberToWord.do(text, $('#converted'));
-      }
-    }
-  });
+    var convertToWord = new Vue({
+        el: '#example',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            run: function (event) {
+                var maxСhars = 9;
 
-  $(document).ready(function () {
+                var text = $(event.target).val();
+                if(!text) return;
 
-      var max_chars = 8
+                if (isNaN(text)){
+                    $("#errmsg").html("Please enter a number between 1 and 999999999").show().fadeOut("slow");
+                    $('#converted').html('');
+                    return;
+                }
 
-      $("#number-to-word").keypress(function (e) {
-          if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-              $("#errmsg").html("Please enter numbers only").show().fadeOut("slow");
-              return false;
-          }
-          else if ($(this).val().length >= max_chars) {
-              $(this).val($(this).val().substr(0, max_chars));
-              $("#errmsg").html("Please enter a number between 1 and 999999999").show().fadeOut("slow");
-          }
-      });
-  });
+                if (text.length > maxСhars) {
+                    $("#errmsg").html("Please enter a number between 1 and 999999999").show().fadeOut("slow");
+                    $('#converted').html('');
+                    return;
+                }
+
+                ConvertNumberToWord.do(text, $('#converted'));
+            }
+        }
+    });
 
 </script>
